@@ -12,18 +12,20 @@ namespace frmUpdateUIFromThread
         public frmUpdateUIFromThread()
         {
             InitializeComponent();
+        }
+        private void frmUpdateUIFromThread_Load(object sender, EventArgs e)
+        {
             control = LbxTxtLog; //this can be any control
             numThreads.Value = 14;
-
         }
+
         private void Log(string msg)
         {
             string m = $"{DateTime.Now.ToString("H:mm:ss.fffff")}\t{msg}\n\n";
             control.BeginInvoke((MethodInvoker)delegate ()
             {
-                //txtLog.AppendText(m);
-                //txtLog.ScrollToCaret();
                 LbxTxtLog.Items.Add(m);
+                LbxTxtLog.TopIndex = LbxTxtLog.Items.Count - 1;
             });
         }
         private async void btnStartThreads_Click(object sender, EventArgs e)
@@ -54,6 +56,7 @@ namespace frmUpdateUIFromThread
 
             Log("All tasks have finished");
         }
+
     }
 }
 

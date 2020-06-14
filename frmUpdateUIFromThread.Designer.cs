@@ -75,6 +75,7 @@
             this.Name = "frmUpdateUIFromThread";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update UI from another thread";
+            this.Load += new System.EventHandler(this.frmUpdateUIFromThread_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numThreads)).EndInit();
             this.ResumeLayout(false);
 
