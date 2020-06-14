@@ -60,4 +60,10 @@ namespace frmUpdateUIFromThread
     }
 }
 
+//  How to update UI from another thread (*** This PROGRAM is based on this article ***)
 //  https://makolyte.com/how-to-update-ui-from-another-thread/
+
+
+//  Updating Your Form from Another Thread without
+//  Creating Delegates for Every Type of Update      (Interesting Article on a Similar Subject)
+//  https://www.codeproject.com/Articles/52752/Updating-Your-Form-from-Another-Thread-without-Cre
