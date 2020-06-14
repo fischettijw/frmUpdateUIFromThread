@@ -37,7 +37,8 @@ namespace frmUpdateUIFromThread
             for (int i = 1; i <= (int)numThreads.Value; i++)
             {
                 var j = i;
-                var delayFor = TimeSpan.FromMilliseconds(random.Next(100, 5000));
+                var delayFor = TimeSpan.FromMilliseconds(random.Next(100, 1000));
+                //var delayFor = TimeSpan.FromMilliseconds(random.Next(100, 5000));
                 var task = Task.Run(async () =>
                 {
                     var idForLog = $"Task ID {j}, ThreadID={Thread.CurrentThread.ManagedThreadId}";
